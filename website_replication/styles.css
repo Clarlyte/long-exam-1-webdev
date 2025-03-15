@@ -187,11 +187,11 @@ ul {
 }
 
 /* Change the label content when checkbox is checked */
-.sidebar-toggle-label::after {
+.sidebar .sidebar-toggle-label::after {
     content: "«";
 }
 
-.sidebar-toggle-checkbox:checked ~ .sidebar .sidebar-toggle-label::after {
+.sidebar-toggle-checkbox:checked ~ .sidebar > .sidebar-toggle-label::after {
     content: "»";
 }
 
@@ -233,20 +233,23 @@ ul {
 
 .sidebar-menu a {
     display: block;
+    width: 100%; 
     color: #5e6266;
     text-decoration: none;
-    padding: 3px 5px;
-    margin: 2px 0;
+    padding: 8px 10px; 
+    margin: 0; 
     font-size: 11px;
     font-weight: bold;
+    box-sizing: border-box; /* Ensures padding doesn't break layout */
 }
 
 .sidebar-menu a:hover {
     background-color: white;
-    color:#FF4500;
+    color: #FF4500;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
+
 
 .sidebar-menu a.active {
     background-color: white;
