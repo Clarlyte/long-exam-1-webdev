@@ -144,9 +144,8 @@ ul {
 }
 
 /* Sidebar toggle (CSS-only using checkbox hack) */
-.sidebar-toggle-checkbox {
-    display: none;
-    /* Hide the checkbox */
+   .sidebar-toggle-checkbox {
+    display: none; /* Hide the checkbox */
 }
 
 .sidebar-toggle-label {
@@ -165,43 +164,54 @@ ul {
     line-height: 16px;
 }
 
-/* When checkbox is checked, change the label text */
-.sidebar-toggle-checkbox:checked~.sidebar .sidebar-toggle-label {
+/* Change the label content when checkbox is checked */
+.sidebar-toggle-label::after {
+    content: "«";
+}
+
+.sidebar-toggle-checkbox:checked ~ .sidebar .sidebar-toggle-label::after {
     content: "»";
 }
 
 /* Sidebar styles */
 .sidebar {
     width: 200px;
-    background-color: white;
+    background-color: #eff8ff;
     border-right: 1px solid #CCCCCC;
     padding: 10px;
     position: relative;
-    transition: width 0.3s ease;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    flex-shrink: 0;
 }
 
 /* Collapsed sidebar state using the checkbox hack */
-.sidebar-toggle-checkbox:checked~.sidebar {
-    width: 40px;
-    overflow: hidden;
+.sidebar-toggle-checkbox:checked ~ .sidebar {
+    width: 30px;
+    padding: 10px 2px;
 }
 
-.sidebar-toggle-checkbox:checked~.sidebar .sidebar-menu a span,
-.sidebar-toggle-checkbox:checked~.sidebar .sidebar-section {
-    display: none;
+.sidebar-toggle-checkbox:checked ~ .sidebar .sidebar-menu,
+.sidebar-toggle-checkbox:checked ~ .sidebar .sidebar-section {
+    opacity: 0;
+    visibility: hidden;
 }
 
-.sidebar-toggle-checkbox:checked~.content {
-    margin-left: 40px;
+.sidebar-toggle-checkbox:checked ~ .content {
+    margin-left: 30px;
 }
 
 .sidebar-menu {
     margin-top: 20px;
 }
 
+.more-button{
+    color: blue;
+}
+
 .sidebar-menu a {
     display: block;
-    color: #369;
+    color: #5e6266;
     text-decoration: none;
     padding: 3px 5px;
     margin: 2px 0;
@@ -210,21 +220,28 @@ ul {
 }
 
 .sidebar-menu a:hover {
-    background-color: #F0F0F0;
+    background-color: white;
+    color:#FF4500;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .sidebar-menu a.active {
+    background-color: white;
     color: #FF4500;
+
 }
 
+
 .sidebar-section {
-    margin-top: 20px;
-    padding-top: 10px;
+    padding: 10px;
+    margin-top: 12px;
     border-top: 1px dotted #CCC;
+    background-color: #dcedff;
 }
 
 .sidebar-section h2 {
-    color: #333;
+    color: #365f98;
     font-size: 12px;
     margin-bottom: 5px;
 }
