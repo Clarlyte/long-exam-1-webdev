@@ -141,33 +141,13 @@
 
             <!-- Recipe steps -->
             <div class="steps-container">
-                <!-- Step 1 - Visible by default -->
-                <section id="step1" class="step" tabindex="-1" itemprop="recipeInstructions">
-                    <div class="container">
-                        <h3>Step 1: Prepare the Marinade</h3>
-                        <div class="step-content">
-                            <div class="step-image">
-                                <img src="assets/step1.jpg" alt="Ingredients for bulgogi marinade in a bowl" width="400" height="300">
-                            </div>
-                            <div class="step-instructions">
-                                <p>Place the sliced beef in a large bowl. In a separate bowl, combine soy sauce, sugar, green onion, garlic, sesame seeds, sesame oil, and ground black pepper.</p>
-                                <p>Tip: Make sure to mix the marinade ingredients thoroughly to ensure the sugar is fully dissolved.</p>
-                            </div>
-                        </div>
-                        <div class="step-navigation-controls">
-                            <a href="#step1" class="nav-button prev" aria-label="Current step: Step 1" tabindex="0">Previous</a>
-                            <a href="#step2" class="nav-button next" aria-label="Go to Step 2" tabindex="0">Next</a>
-                        </div>
-                    </div>
-                </section>
-
                 <!-- Step 2 - Hidden by default -->
                 <section id="step2" class="step" tabindex="-1" aria-hidden="true" itemprop="recipeInstructions">
                     <div class="container">
                         <h3>Step 2: Marinate the Beef</h3>
                         <div class="step-content">
                             <div class="step-image">
-                                <img src="/placeholder.svg?height=300&width=400" alt="Beef slices being mixed with marinade" width="400" height="300">
+                                <img src="assets/step2.jpg" alt="Beef slices being mixed with marinade" width="400" height="300">
                             </div>
                             <div class="step-instructions">
                                 <p>Pour the marinade over the sliced beef and mix well to ensure all the meat is coated. Cover the bowl with plastic wrap and refrigerate for at least 1 hour, or overnight for best results.</p>
@@ -187,7 +167,7 @@
                         <h3>Step 3: Cook the Bulgogi</h3>
                         <div class="step-content">
                             <div class="step-image">
-                                <img src="/placeholder.svg?height=300&width=400" alt="Bulgogi cooking in a hot pan" width="400" height="300">
+                                <img src="assets/step3.jpg" alt="Bulgogi cooking in a hot pan" width="400" height="300">
                             </div>
                             <div class="step-instructions">
                                 <p>Heat a large skillet over medium-high heat. Working in batches if necessary, add the marinated meat to the skillet in a single layer and cook, turning occasionally, until the meat is cooked through and slightly caramelized, about 5-7 minutes per batch.</p>
@@ -207,7 +187,7 @@
                         <h3>Step 4: Serve the Bulgogi</h3>
                         <div class="step-content">
                             <div class="step-image">
-                                <img src="/placeholder.svg?height=300&width=400" alt="Finished bulgogi served with rice and lettuce leaves" width="400" height="300">
+                                <img src="assets/step4.jpg" alt="Finished bulgogi served with rice and lettuce leaves" width="400" height="300">
                             </div>
                             <div class="step-instructions">
                                 <p>Transfer the cooked bulgogi to a serving plate. Serve hot with steamed rice, lettuce leaves for wrapping, and side dishes such as kimchi or sliced cucumbers.</p>
@@ -218,6 +198,26 @@
                         <div class="step-navigation-controls">
                             <a href="#step3" class="nav-button prev" aria-label="Go back to Step 3" tabindex="0">Previous</a>
                             <a href="#step1" class="nav-button restart" aria-label="Restart recipe from Step 1" tabindex="0">Restart Recipe</a>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Step 1 - Visible by default (MOVED TO END) -->
+                <section id="step1" class="step" tabindex="-1" itemprop="recipeInstructions">
+                    <div class="container">
+                        <h3>Step 1: Prepare the Marinade</h3>
+                        <div class="step-content">
+                            <div class="step-image">
+                                <img src="assets/step1.jpg" alt="Ingredients for bulgogi marinade in a bowl" width="400" height="300">
+                            </div>
+                            <div class="step-instructions">
+                                <p>Place the sliced beef in a large bowl. In a separate bowl, combine soy sauce, sugar, green onion, garlic, sesame seeds, sesame oil, and ground black pepper.</p>
+                                <p>Tip: Make sure to mix the marinade ingredients thoroughly to ensure the sugar is fully dissolved.</p>
+                            </div>
+                        </div>
+                        <div class="step-navigation-controls">
+                            <a href="#step1" class="nav-button prev" aria-label="Current step: Step 1" tabindex="0">Previous</a>
+                            <a href="#step2" class="nav-button next" aria-label="Go to Step 2" tabindex="0">Next</a>
                         </div>
                     </div>
                 </section>
