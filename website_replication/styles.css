@@ -265,6 +265,8 @@ ul {
     background-color: #dcedff;
 }
 
+
+
 .sidebar-section h2 {
     color: #365f98;
     font-size: 12px;
@@ -291,6 +293,12 @@ ul {
     display: flex;
     align-items: flex-start;
     position: relative;
+}
+
+.paganation {
+    background-color: white;
+    border: 1px solid #CCCCCC;
+    padding: 2px;
 }
 
 .rank {
