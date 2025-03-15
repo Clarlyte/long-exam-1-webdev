@@ -1,134 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reddit Clone</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #eef2f6;
-        }
-
-        .title-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            background-color: #dae0e6;
-            padding: 10px 15px;
-            font-size: 24px;
-            font-weight: bold;
-            border-bottom: 1px solid #aebac1;
-            position: relative;
-        }
-
-        .user-info {
-            background-color: #ffffff;
-            padding: 5px 10px;
-            border: 1px solid #aebac1;
-            border-bottom: none;
-            border-radius: 5px 5px 0 0;
-            font-size: 14px;
-            color: #333;
-            position: absolute;
-            right: 10px;
-            bottom: 0px;
-        }
-
-        .user-info a {
-            color: #0079d3;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .user-info a:hover {
-            text-decoration: underline;
-        }
-
-        .nav-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #ffffff;
-            padding: 25px;
-            border-bottom: 1px solid #aebac1;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-
-        .nav-left {
-            display: flex;
-            align-items: center;
-            position: absolute;
-            left: 10px;
-            bottom: 0px;
-        }
-
-        .nav-left a {
-            margin: 0 5px;
-            padding: 5px 10px;
-            text-decoration: none;
-            color: #0079d3;
-            font-size: 16px;
-            border: 1px solid #aebac1;
-            border-radius: 5px;
-            background-color: white;
-        }
-
-        .nav-left a:hover {
-            background-color: #f0f0f0;
-            color: #ff4500;
-            border-bottom: none;
-        }
-
-        .search-bar {
-            padding: 5px;
-            border: 1px solid #aebac1;
-            border-radius: 5px;
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            position: absolute;
-            right: 15px;
-        }
-
-        .nav-right div {
-            margin-left: 10px;
-            padding: 5px 10px;
-            border: 1px solid #aebac1;
-            background-color: #ffffff;
-            border-radius: 5px;
-        }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>reddit: the front page of the internet</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <div class="title-bar">
-        <div>reddit</div>
-        <div class="user-info">
-            <a href="#">7hundredand77</a>, you're back! <a href="#">preferences</a> | <a href="#">logout?</a> :(
+    <!-- Header section with user information -->
+    <header class="header">
+        <div class="user-header">
+            7hundredand77, you're back! 
+            <a href="#">preferences</a> | 
+            <a href="#">logout</a>? :(
         </div>
-    </div>
-    <div class="nav-bar">
-        <div class="nav-left">
-            <a href="#" style="color: #ff4500; font-weight: bold;">What's Hot</a>
-            <a href="#">New</a>
-            <a href="#">Controversial</a>
-            <a href="#">Top</a>
-            <a href="#">Saved</a>
+        <!-- Reddit logo -->
+        <div class="logo">
+            <a href="#"><img src="/placeholder.svg?height=40&width=120" alt="Reddit Logo"></a>
         </div>
-        <div class="nav-right">
-            <input type="text" class="search-bar" placeholder="Search">
-            <div>📩 1 New Msg</div>
-            <div>🔗 53,211 Links</div>
-            <div>💬 4,887 Comments</div>
+    </header>
+
+    <!-- Main navigation bar -->
+    <nav class="main-nav">
+        <div class="nav-links">
+            <a href="#" class="selected">what's hot</a>
+            <a href="#">new</a>
+            <a href="#">controversial</a>
+            <a href="#">top</a>
+            <a href="#">saved</a>
         </div>
+        <div class="search-box">
+            <input type="text" placeholder="search">
+            <button type="submit"></button>
+        </div>
+        <div class="user-tools">
+            <a href="#" class="mail">1 New Msg</a>
+            <a href="#" class="karma">53,211 Link</a>
+            <a href="#" class="comment-karma">4,887 Comment</a>
+        </div>
+    </nav>
+
+    <!-- Main content container -->
+    <div class="container">
+        <!-- Hidden checkbox for sidebar toggle -->
+        <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-checkbox">
+        
+        <!-- Sidebar with subreddit links -->
+        <aside class="sidebar">
+            <!-- Label for sidebar toggle checkbox -->
+            <label for="sidebar-toggle" class="sidebar-toggle-label" title="Toggle Sidebar">«</label>
+            
+            <!-- Sidebar navigation links -->
+            <div class="sidebar-menu">
+                <a href="#" class="active">FRONT PAGE</a>
+                <a href="#">PICS</a>
+                <a href="#">SCIENCE</a>
+                <a href="#">TECHNOLOGY</a>
+                <a href="#">ASK REDDIT</a>
+                <a href="#">FUNNY</a>
+                <a href="#">WTF</a>
+                <a href="#">IAMA</a>
+                <a href="#">WORLD NEWS</a>
+                <a href="#">TODAY I LEARNED</a>
+                <a href="#">WORLDNEWS</a>
+                <a href="#">WEBDESIGN</a>
+                <a href="#">ATHEIST</a>
+                <a href="#">FFFFFFFUUUUUUUUUUUU</a>
+                <a href="#">(MORE)</a>
+            </div>
+            
+            <!-- Sidebar additional sections -->
+            <div class="sidebar-section">
+                <h2>Submit a link</h2>
+                <p>Anything interesting: news article, blog entry, video, picture...</p>
+            </div>
+            
+            <div class="sidebar-section">
+                <h2>Create Community</h2>
+                <p>for your LARPing crowd...</p>
+                <p>...because nothing in life is free (except reddit!)</p>
+                <p>Here on the side</p>
+            </div>
+        </aside>
+
+        <!-- Main content area with posts -->
+        <main class="content">
+            <!-- Post #1 -->
+            <article class="post">
+                <div class="rank">1</div>
+                <div class="vote-arrows">
+                    <label class="arrow up" title="upvote"></label>
+                    <div class="score">215</div>
+                    <label class="arrow down" title="downvote"></label>
+                </div>
+                <div class="thumbnail">
+                    <img src="/placeholder.svg?height=70&width=70" alt="Post thumbnail">
+                </div>
+                <div class="post-content">
+                    <a href="#post1-comments" class="post-title">What do you call 50 guys watching the Super Bowl at home?</a>
+                    <span class="domain">(cnn.com)</span>
+                    <div class="post-meta">
+                        submitted 19 hours ago by <a href="#">krispykrackers</a>
+                    </div>
+                    <div class="post-actions">
+                        <a href="#post1-comments">623 comments</a>
+                        <a href="#">share</a>
+                        <a href="#">save</a>
+                        <a href="#">hide</a>
+                        <a href="#">report</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Post #2 -->
+            <article class="post">
+                <div class="rank">2</div>
+                <div class="vote-arrows">
+                    <label class="arrow up" title="upvote"></label>
+                    <div class="score">232</div>
+                    <label class="arrow down" title="downvote"></label>
+                </div>
+                <div class="post-content">
+                    <a href="#post2-comments" class="post-title">IAM the guy who created this design AMA</a>
+                    <span class="domain">(i.imgur.com)</span>
+                    <div class="post-meta">
+                        submitted 13 hours ago by <a href="#">7hundredand77</a>
+                    </div>
+                    <div class="post-actions">
+                        <a href="#post2-comments">208 comments</a>
+                        <a href="#">share</a>
+                        <a href="#">save</a>
+                        <a href="#">hide</a>
+                        <a href="#">report</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Post #3 -->
+            <article class="post">
+                <div class="rank">3</div>
+                <div class="vote-arrows">
+                    <label class="arrow up" title="upvote"></label>
+                    <div class="score">12</div>
+                    <label class="arrow down" title="downvote"></label>
+                </div>
+                <div class="post-content">
+                    <a href="#post3-comments" class="post-title">Use this Chrome addon to 'block major third parties and search engines from tracking the webpages you go to and searches...</a>
+                    <span class="domain">(i.imgur.com)</span>
+                    <div class="post-meta">
+                        submitted 15 hours ago by <a href="#">krispykrackers</a>
+                    </div>
+                    <div class="post-actions">
+                        <a href="#post3-comments">208 comments</a>
+                        <a href="#">share</a>
+                        <a href="#">save</a>
+                        <a href="#">hide</a>
+                        <a href="#">report</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- More posts would follow the same structure -->
+        </main>
+
+        <!-- Comments sections using :target pseudo-class -->
+        <!-- Post 1 Comments -->
+        <section id="post1-comments" class="comments-section">
+            <a href="#" class="close-comments">&times;</a>
+            <div class="comments-header">
+                <h1>What do you call 50 guys watching the Super Bowl at home?</h1>
+                <span class="domain">(cnn.com)</span>
+                <div class="vote-info">
+                    <span class="upvotes">450 up votes</span>
+                    <span class="downvotes">235 down votes</span>
+                </div>
+            </div>
+            
+            <!-- Comment #1 -->
+            <div class="comment">
+                <div class="comment-meta">
+                    <a href="#" class="username">SportsGuy42</a>
+                    <span class="points">87 points 18 hours ago</span>
+                </div>
+                <div class="comment-content">
+                    <p>A fantasy football league!</p>
+                </div>
+                <div class="comment-actions">
+                    <a href="#">permalink</a>
+                    <a href="#">parent</a>
+                    <a href="#">reply</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Post 2 Comments -->
+        <section id="post2-comments" class="comments-section">
+            <a href="#" class="close-comments">&times;</a>
+            <div class="comments-header">
+                <h1>IAM the guy who created this design AMA</h1>
+                <span class="domain">(i.imgur.com)</span>
+                <p>http://imgs.imagestack.us/img3/9807/goodlookingnew3.jpg</p>
+                <div class="vote-info">
+                    <span class="upvotes">380 up votes</span>
+                    <span class="downvotes">158 down votes</span>
+                </div>
+            </div>
+            
+            <!-- Comment #1 -->
+            <div class="comment">
+                <div class="comment-meta">
+                    <a href="#" class="username">UserNumber42</a>
+                    <span class="points">47 points 21 hours ago</span>
+                </div>
+                <div class="comment-content">
+                    <p>Wow, the first reddit redesign I've seen that doesn't suck, and I've been on this site for 4 years now (different accounts). Very functional. With wide screen monitors this is very cool.</p>
+                </div>
+                <div class="comment-actions">
+                    <a href="#">permalink</a>
+                    <a href="#">parent</a>
+                    <a href="#">reply</a>
+                </div>
+            </div>
+            
+            <!-- Comment #2 -->
+            <div class="comment">
+                <div class="comment-meta">
+                    <a href="#" class="username">7hundredand77</a>
+                    <span class="points">14 points 20 hours ago</span>
+                </div>
+                <div class="comment-content">
+                    <p>Hi, yeah, since I know many people use widescreen monitors these days, this could make use of space a lot more effectively. A sweet spot with columns needs to be found where there is enough space to view everything perfectly. Since I just quickly put this one together, I didn't really spend much time finding that right balance.</p>
+                </div>
+                <div class="comment-actions">
+                    <a href="#">permalink</a>
+                    <a href="#">parent</a>
+                    <a href="#">edit</a>
+                    <a href="#">delete</a>
+                    <a href="#">reply</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Post 3 Comments -->
+        <section id="post3-comments" class="comments-section">
+            <a href="#" class="close-comments">&times;</a>
+            <div class="comments-header">
+                <h1>Use this Chrome addon to 'block major third parties and search engines from tracking the webpages you go to and searches...</h1>
+                <span class="domain">(i.imgur.com)</span>
+                <div class="vote-info">
+                    <span class="upvotes">120 up votes</span>
+                    <span class="downvotes">108 down votes</span>
+                </div>
+            </div>
+            
+            <!-- Comment #1 -->
+            <div class="comment">
+                <div class="comment-meta">
+                    <a href="#" class="username">PrivacyGuy</a>
+                    <span class="points">32 points 14 hours ago</span>
+                </div>
+                <div class="comment-content">
+                    <p>This is a great addon. I've been using it for months and it works really well without slowing down browsing.</p>
+                </div>
+                <div class="comment-actions">
+                    <a href="#">permalink</a>
+                    <a href="#">parent</a>
+                    <a href="#">reply</a>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
-
 </html>
