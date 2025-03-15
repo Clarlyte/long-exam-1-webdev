@@ -26,20 +26,28 @@ ul {
     list-style: none;
 }
 
-/* Header styles */
 .header {
     background-color: #CEE3F8;
     border-bottom: 1px solid #5F99CF;
     padding: 5px 10px;
     height: 40px;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .logo {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 10px;
+    transform: translateY(-50%);
 }
+
+.logo img {
+    max-height: 50px;
+    width: auto;
+}
+
 
 .user-header {
     float: right;
@@ -76,6 +84,14 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+.nav-links {
+    position: absolute;
+    bottom: -1px;
+
+
 }
 
 .nav-links a {
@@ -83,24 +99,28 @@ ul {
     text-decoration: none;
     padding: 2px 6px;
     background: linear-gradient(to bottom, #FEFEFE, #E6E6E6);
-    border: 1px solid #C6C6C6;
+    border: 1px solid #000000;
     border-radius: 3px;
     margin-right: 5px;
     font-size: 11px;
 }
 
+
 .nav-links a.selected {
     font-weight: bold;
+    border-bottom: none;
 }
 
 .search-box {
     display: flex;
     align-items: center;
-    
+    position: absolute;
+    right: 25%;
+
 }
 
 .search-box input {
-    width: 300px;
+    width: 150px;
     height: 18px;
     border: 1px solid #999;
     padding: 0 5px;
@@ -119,6 +139,8 @@ ul {
 .user-tools {
     display: flex;
     gap: 10px;
+    position: absolute;
+    right: 1%;
 }
 
 .user-tools a {
@@ -238,8 +260,6 @@ ul {
 /* Content area */
 .content {
     flex: 1;
-    padding: 10px;
-    margin-left: 200px;
     transition: margin-left 0.3s ease;
 }
 
@@ -247,8 +267,6 @@ ul {
 .post {
     background-color: white;
     border: 1px solid #CCCCCC;
-    border-radius: 3px;
-    margin-bottom: 8px;
     padding: 5px;
     display: flex;
     align-items: flex-start;
