@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Cooking Guide - Easy Bulgogi (Korean BBQ Beef)</title>
+    <meta name="description" content="An accessible, step-by-step guide to cooking delicious Korean Bulgogi">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header id="page-header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <h1>CookingGuide</h1>
+                </div>
+                <div class="search-bar">
+                    <form role="search" aria-label="Site">
+                        <input type="search" placeholder="Find a recipe or ingredient" aria-label="Search for recipes">
+                        <button type="submit" aria-label="Submit search">
+                            <span class="sr-only">Search</span>
+                            🔍
+                        </button>
+                    </form>
+                </div>
+                <div class="user-actions">
+                    <a href="#" class="user-action-link">Log In</a>
+                    <a href="#" class="user-action-link">Magazine</a>
+                    <a href="#" class="user-action-link">Newsletters</a>
+                </div>
+            </div>
+            <nav class="main-nav" aria-label="Main">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-link">Dinners</a></li>
+                    <li><a href="#" class="nav-link">Meals</a></li>
+                    <li><a href="#" class="nav-link">Ingredients</a></li>
+                    <li><a href="#" class="nav-link">Occasions</a></li>
+                    <li><a href="#" class="nav-link">Cuisines</a></li>
+                    <li><a href="#" class="nav-link">Kitchen Tips</a></li>
+                    <li><a href="#" class="nav-link">News</a></li>
+                    <li><a href="#" class="nav-link">Features</a></li>
+                    <li><a href="#" class="nav-link">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb-nav">
+        <div class="container">
+            <nav aria-label="Breadcrumb">
+                <ol class="breadcrumb-list">
+                    <li><a href="#">Recipes</a></li>
+                    <li><a href="#">Global Cuisines</a></li>
+                    <li><a href="#">Asian</a></li>
+                    <li><a href="#">Korean</a></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <article class="recipe" itemscope itemtype="https://schema.org/Recipe">
+            <header class="recipe-header">
+                <div class="container">
+                    <h2 itemprop="name">Easy Bulgogi (Korean BBQ Beef)</h2>
+                    
+                    <div class="recipe-rating">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-value" itemprop="ratingValue">4.8</span>
+                        <span class="rating-count">(212)</span>
+                        <a href="#" class="reviews-link">161 Reviews</a>
+                        <a href="#" class="photos-link">58 Photos</a>
+                    </div>
+                    
+                    <p class="recipe-intro" itemprop="description">Bulgogi, or Korean barbecued beef, is made with marinated sliced beef. Most recipes call for crushed pear to tenderize the meat. My boyfriend's Korean mother says Coca-Cola can also be used for the same purpose. This recipe uses very thinly-sliced sirloin steak, so tenderization isn't necessary. It's delicious served with rice, lettuce leaves, and chile paste or kimchi.</p>
+                    
+                    <div class="recipe-meta">
+                        <div class="meta-item" itemprop="prepTime" content="PT15M">
+                            <span class="meta-label">Prep Time:</span>
+                            <span class="meta-value">15 mins</span>
+                        </div>
+                        <div class="meta-item" itemprop="cookTime" content="PT15M">
+                            <span class="meta-label">Cook Time:</span>
+                            <span class="meta-value">15 mins</span>
+                        </div>
+                        <div class="meta-item" itemprop="totalTime" content="PT1H30M">
+                            <span class="meta-label">Total Time:</span>
+                            <span class="meta-value">1 hr 30 mins</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Servings:</span>
+                            <span class="meta-value" itemprop="recipeYield">4</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Yield:</span>
+                            <span class="meta-value">4 servings</span>
+                        </div>
+                    </div>
+                    
+                    <div class="recipe-actions">
+                        <button class="action-button save-button">Save</button>
+                        <button class="action-button rate-button">Rate</button>
+                        <button class="action-button print-button">Print</button>
+                        <button class="action-button share-button">Share</button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Recipe ingredients -->
+            <section id="ingredients" class="recipe-section">
+                <div class="container">
+                    <h3>Ingredients</h3>
+                    <ul class="ingredients-list" itemprop="recipeIngredient">
+                        <li>1 pound thinly-sliced beef sirloin steak</li>
+                        <li>5 tablespoons soy sauce</li>
+                        <li>2 ½ tablespoons white sugar</li>
+                        <li>¼ cup chopped green onion</li>
+                        <li>2 tablespoons minced garlic</li>
+                        <li>2 tablespoons sesame seeds</li>
+                        <li>2 tablespoons sesame oil</li>
+                        <li>½ teaspoon ground black pepper</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Step navigation -->
+            <nav class="step-navigation" aria-label="Recipe steps navigation">
+                <div class="container">
+                    <p>Navigate through the recipe steps:</p>
+                    <ul class="step-nav-list">
+                        <li><a href="#step1" class="step-link" aria-current="page">Step 1</a></li>
+                        <li><a href="#step2" class="step-link">Step 2</a></li>
+                        <li><a href="#step3" class="step-link">Step 3</a></li>
+                        <li><a href="#step4" class="step-link">Step 4</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Recipe steps -->
+            <div class="steps-container">
+                <!-- Step 1 - Visible by default -->
+                <section id="step1" class="step" tabindex="-1" itemprop="recipeInstructions">
+                    <div class="container">
+                        <h3>Step 1: Prepare the Marinade</h3>
+                        <div class="step-content">
+                            <div class="step-image">
+                                <img src="assets/step1.jpg" alt="Ingredients for bulgogi marinade in a bowl" width="400" height="300">
+                            </div>
+                            <div class="step-instructions">
+                                <p>Place the sliced beef in a large bowl. In a separate bowl, combine soy sauce, sugar, green onion, garlic, sesame seeds, sesame oil, and ground black pepper.</p>
+                                <p>Tip: Make sure to mix the marinade ingredients thoroughly to ensure the sugar is fully dissolved.</p>
+                            </div>
+                        </div>
+                        <div class="step-navigation-controls">
+                            <a href="#step1" class="nav-button prev" aria-label="Current step: Step 1" tabindex="0">Previous</a>
+                            <a href="#step2" class="nav-button next" aria-label="Go to Step 2" tabindex="0">Next</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Step 2 - Hidden by default -->
+                <section id="step2" class="step" tabindex="-1" aria-hidden="true" itemprop="recipeInstructions">
+                    <div class="container">
+                        <h3>Step 2: Marinate the Beef</h3>
+                        <div class="step-content">
+                            <div class="step-image">
+                                <img src="/placeholder.svg?height=300&width=400" alt="Beef slices being mixed with marinade" width="400" height="300">
+                            </div>
+                            <div class="step-instructions">
+                                <p>Pour the marinade over the sliced beef and mix well to ensure all the meat is coated. Cover the bowl with plastic wrap and refrigerate for at least 1 hour, or overnight for best results.</p>
+                                <p>Tip: For more flavor, occasionally turn the meat in the marinade while it's refrigerating.</p>
+                            </div>
+                        </div>
+                        <div class="step-navigation-controls">
+                            <a href="#step1" class="nav-button prev" aria-label="Go back to Step 1" tabindex="0">Previous</a>
+                            <a href="#step3" class="nav-button next" aria-label="Go to Step 3" tabindex="0">Next</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Step 3 - Hidden by default -->
+                <section id="step3" class="step" tabindex="-1" aria-hidden="true" itemprop="recipeInstructions">
+                    <div class="container">
+                        <h3>Step 3: Cook the Bulgogi</h3>
+                        <div class="step-content">
+                            <div class="step-image">
+                                <img src="/placeholder.svg?height=300&width=400" alt="Bulgogi cooking in a hot pan" width="400" height="300">
+                            </div>
+                            <div class="step-instructions">
+                                <p>Heat a large skillet over medium-high heat. Working in batches if necessary, add the marinated meat to the skillet in a single layer and cook, turning occasionally, until the meat is cooked through and slightly caramelized, about 5-7 minutes per batch.</p>
+                                <p>Tip: Don't overcrowd the pan - cooking in batches ensures the meat browns properly instead of steaming.</p>
+                            </div>
+                        </div>
+                        <div class="step-navigation-controls">
+                            <a href="#step2" class="nav-button prev" aria-label="Go back to Step 2" tabindex="0">Previous</a>
+                            <a href="#step4" class="nav-button next" aria-label="Go to Step 4" tabindex="0">Next</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Step 4 - Hidden by default -->
+                <section id="step4" class="step" tabindex="-1" aria-hidden="true" itemprop="recipeInstructions">
+                    <div class="container">
+                        <h3>Step 4: Serve the Bulgogi</h3>
+                        <div class="step-content">
+                            <div class="step-image">
+                                <img src="/placeholder.svg?height=300&width=400" alt="Finished bulgogi served with rice and lettuce leaves" width="400" height="300">
+                            </div>
+                            <div class="step-instructions">
+                                <p>Transfer the cooked bulgogi to a serving plate. Serve hot with steamed rice, lettuce leaves for wrapping, and side dishes such as kimchi or sliced cucumbers.</p>
+                                <p>To eat in the traditional Korean way, place a small amount of rice and bulgogi on a lettuce leaf, add any desired toppings like kimchi or ssamjang (spicy dipping sauce), then fold and eat in one bite.</p>
+                                <p>Enjoy your homemade Korean Bulgogi!</p>
+                            </div>
+                        </div>
+                        <div class="step-navigation-controls">
+                            <a href="#step3" class="nav-button prev" aria-label="Go back to Step 3" tabindex="0">Previous</a>
+                            <a href="#step1" class="nav-button restart" aria-label="Restart recipe from Step 1" tabindex="0">Restart Recipe</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Nutrition Facts -->
+            <section id="nutrition" class="recipe-section">
+                <div class="container">
+                    <h3>Nutrition Facts</h3>
+                    <div class="nutrition-facts" itemprop="nutrition" itemscope itemtype="https://schema.org/NutritionInformation">
+                        <p><strong>Per Serving:</strong></p>
+                        <ul class="nutrition-list">
+                            <li><span class="nutrient-label">Calories:</span> <span itemprop="calories">294</span></li>
+                            <li><span class="nutrient-label">Protein:</span> <span itemprop="proteinContent">25g</span></li>
+                            <li><span class="nutrient-label">Carbohydrates:</span> <span itemprop="carbohydrateContent">13g</span></li>
+                            <li><span class="nutrient-label">Fat:</span> <span itemprop="fatContent">16g</span></li>
+                            <li><span class="nutrient-label">Saturated Fat:</span> <span itemprop="saturatedFatContent">5g</span></li>
+                            <li><span class="nutrient-label">Cholesterol:</span> <span itemprop="cholesterolContent">68mg</span></li>
+                            <li><span class="nutrient-label">Sodium:</span> <span itemprop="sodiumContent">1214mg</span></li>
+                            <li><span class="nutrient-label">Potassium:</span> <span>457mg</span></li>
+                            <li><span class="nutrient-label">Fiber:</span> <span itemprop="fiberContent">1g</span></li>
+                            <li><span class="nutrient-label">Sugar:</span> <span itemprop="sugarContent">10g</span></li>
+                            <li><span class="nutrient-label">Vitamin C:</span> <span>3mg</span></li>
+                            <li><span class="nutrient-label">Calcium:</span> <span>57mg</span></li>
+                            <li><span class="nutrient-label">Iron:</span> <span>3mg</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer id="page-footer">
+        <div class="container">
+            <p>&copy; 2025 Interactive Cooking Guide. All rights reserved.</p>
+            <p>Recipe adapted from <a href="https://www.allrecipes.com/recipe/246172/easy-bulgogi-korean-bbq-beef/" target="_blank" rel="noopener">AllRecipes.com</a></p>
+            <p>This guide is designed to be fully accessible for all users, including those using screen readers.</p>
+        </div>
+    </footer>
+</body>
+</html>
