@@ -1,5 +1,5 @@
 /* Base styles and CSS Reset */
-   * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -31,7 +31,7 @@ ul {
     background-color: #CEE3F8;
     border-bottom: 1px solid #5F99CF;
     padding: 5px 10px;
-    height: 18px;
+    height: 40px;
     position: relative;
 }
 
@@ -45,6 +45,16 @@ ul {
     float: right;
     color: #336699;
     font-size: 11px;
+    position: absolute;
+    right: 15px;
+    bottom: -1px;
+    border: 1px solid #aebac1;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    padding: 5px;
+    background-color: #F0F0F0;
+
+
 }
 
 .user-header a {
@@ -62,7 +72,7 @@ ul {
     background-color: #F0F0F0;
     border-bottom: 1px solid #808080;
     padding: 2px 10px;
-    height: 22px;
+    height: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -86,6 +96,7 @@ ul {
 .search-box {
     display: flex;
     align-items: center;
+    
 }
 
 .search-box input {
@@ -114,6 +125,11 @@ ul {
     color: #369;
     font-size: 11px;
     text-decoration: none;
+    border: 1px solid #aebac1;
+    border-radius: 5px 5px 5px 5px;
+    padding: 2px;
+    background-color: white;
+
 }
 
 .user-tools a.mail {
@@ -129,7 +145,8 @@ ul {
 
 /* Sidebar toggle (CSS-only using checkbox hack) */
 .sidebar-toggle-checkbox {
-    display: none; /* Hide the checkbox */
+    display: none;
+    /* Hide the checkbox */
 }
 
 .sidebar-toggle-label {
@@ -149,7 +166,7 @@ ul {
 }
 
 /* When checkbox is checked, change the label text */
-.sidebar-toggle-checkbox:checked ~ .sidebar .sidebar-toggle-label {
+.sidebar-toggle-checkbox:checked~.sidebar .sidebar-toggle-label {
     content: "»";
 }
 
@@ -164,17 +181,17 @@ ul {
 }
 
 /* Collapsed sidebar state using the checkbox hack */
-.sidebar-toggle-checkbox:checked ~ .sidebar {
+.sidebar-toggle-checkbox:checked~.sidebar {
     width: 40px;
     overflow: hidden;
 }
 
-.sidebar-toggle-checkbox:checked ~ .sidebar .sidebar-menu a span,
-.sidebar-toggle-checkbox:checked ~ .sidebar .sidebar-section {
+.sidebar-toggle-checkbox:checked~.sidebar .sidebar-menu a span,
+.sidebar-toggle-checkbox:checked~.sidebar .sidebar-section {
     display: none;
 }
 
-.sidebar-toggle-checkbox:checked ~ .content {
+.sidebar-toggle-checkbox:checked~.content {
     margin-left: 40px;
 }
 
@@ -382,7 +399,8 @@ ul {
     padding-bottom: 10px;
     border-bottom: 1px solid #CCCCCC;
     margin-bottom: 10px;
-    padding-right: 20px; /* Make room for close button */
+    padding-right: 20px;
+    /* Make room for close button */
 }
 
 .comments-header h1 {
@@ -435,7 +453,7 @@ ul {
     margin-right: 5px;
 }
 
-/* Media Queries*/ 
+/* Media Queries*/
 @media (max-width: 1024px) {
     .comments-section {
         width: 50%;
@@ -446,22 +464,22 @@ ul {
     .container {
         flex-direction: column;
     }
-    
+
     .sidebar {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid #CCCCCC;
     }
-    
-    .sidebar-toggle-checkbox:checked ~ .sidebar {
+
+    .sidebar-toggle-checkbox:checked~.sidebar {
         width: 100%;
         height: 30px;
     }
-    
+
     .content {
         margin-left: 0;
     }
-    
+
     .comments-section {
         width: 100%;
         position: static;
