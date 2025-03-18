@@ -48,7 +48,6 @@ ul {
     width: auto;
 }
 
-
 .user-header {
     float: right;
     color: #336699;
@@ -166,8 +165,9 @@ ul {
 }
 
 /* Sidebar toggle (CSS-only using checkbox hack) */
-   .sidebar-toggle-checkbox {
-    display: none; /* Hide the checkbox */
+.sidebar-toggle-checkbox {
+    display: none;
+    /* Hide the checkbox */
 }
 
 .sidebar-toggle-label {
@@ -191,7 +191,7 @@ ul {
     content: "«";
 }
 
-.sidebar-toggle-checkbox:checked ~ .sidebar > .sidebar-toggle-label::after {
+.sidebar-toggle-checkbox:checked~.sidebar>.sidebar-toggle-label::after {
     content: "»";
 }
 
@@ -208,18 +208,18 @@ ul {
 }
 
 /* Collapsed sidebar state using the checkbox hack */
-.sidebar-toggle-checkbox:checked ~ .sidebar {
+.sidebar-toggle-checkbox:checked~.sidebar {
     width: 30px;
     padding: 10px 2px;
 }
 
-.sidebar-toggle-checkbox:checked ~ .sidebar .sidebar-menu,
-.sidebar-toggle-checkbox:checked ~ .sidebar .sidebar-section {
+.sidebar-toggle-checkbox:checked~.sidebar .sidebar-menu,
+.sidebar-toggle-checkbox:checked~.sidebar .sidebar-section {
     opacity: 0;
     visibility: hidden;
 }
 
-.sidebar-toggle-checkbox:checked ~ .content {
+.sidebar-toggle-checkbox:checked~.content {
     margin-left: 30px;
 }
 
@@ -227,20 +227,21 @@ ul {
     margin-top: 20px;
 }
 
-.more-button{
+.more-button {
     color: blue;
 }
 
 .sidebar-menu a {
     display: block;
-    width: 100%; 
+    width: 100%;
     color: #5e6266;
     text-decoration: none;
-    padding: 8px 10px; 
-    margin: 0; 
+    padding: 8px 10px;
+    margin: 0;
     font-size: 11px;
     font-weight: bold;
-    box-sizing: border-box; /* Ensures padding doesn't break layout */
+    box-sizing: border-box;
+    /* Ensures padding doesn't break layout */
 }
 
 .sidebar-menu a:hover {
@@ -297,9 +298,11 @@ ul {
 
 .pagination {
     display: flex;
-    justify-content: center; /* Centers the buttons */
+    justify-content: center;
+    /* Centers the buttons */
     align-items: center;
-    gap: 10px; /* Adds spacing between buttons */
+    gap: 10px;
+    /* Adds spacing between buttons */
     background-color: #f8f8f8;
     border: 1px solid #ccc;
     padding: 5px 10px;
@@ -308,9 +311,11 @@ ul {
 
 .pagination {
     display: flex;
-    justify-content: flex-end; /* Aligns buttons to the right */
+    justify-content: flex-end;
+    /* Aligns buttons to the right */
     align-items: center;
-    gap: 10px; /* Space between buttons */
+    gap: 10px;
+    /* Space between buttons */
     background-color: #f8f8f8;
     border: 1px solid #ccc;
     padding: 5px 10px;
@@ -572,5 +577,146 @@ ul {
         width: 100%;
         position: static;
         height: auto;
+    }
+}
+
+.comments-section {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 40px;
+    width: 40%;
+    height: calc(100vh - 40px);
+    background: white;
+    border-left: 1px solid #CCCCCC;
+    padding: 10px;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+/* Show comments section when targeted */
+.comments-section:target {
+    display: block;
+}
+
+.close-comments {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    color: #888;
+    text-decoration: none;
+}
+
+.comments-header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #CCCCCC;
+    margin-bottom: 10px;
+    padding-right: 20px;
+    /* Make room for close button */
+}
+
+.comments-header h1 {
+    font-size: 16px;
+    color: #369;
+    margin-bottom: 5px;
+}
+
+.vote-info {
+    margin-top: 5px;
+    font-size: 11px;
+}
+
+.upvotes {
+    color: #FF8B60;
+    margin-right: 10px;
+}
+
+.downvotes {
+    color: #9494FF;
+}
+
+.comment {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #CCCCCC;
+}
+
+.comment-meta {
+    margin-bottom: 3px;
+    position: relative;
+}
+
+.username {
+    font-weight: bold;
+    color: #369;
+}
+
+.points {
+    color: #888;
+    font-size: 10px;
+}
+
+.expand-collapse {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    color: #888;
+    text-decoration: none;
+}
+
+.comment-content {
+    margin-bottom: 3px;
+}
+
+.comment-content p {
+    margin-bottom: 5px;
+}
+
+.comment-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+.comment-content li {
+    margin-bottom: 2px;
+}
+
+.comment-actions {
+    margin-bottom: 5px;
+}
+
+.comment-actions a {
+    color: #888;
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+/* Nested comments */
+.nested-comment {
+    margin-left: 20px;
+    border-left: 2px solid #CCCCCC;
+    padding-left: 8px;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+/* Media Queries*/
+@media (max-width: 1024px) {
+    .comments-section {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .comments-section {
+        width: 100%;
+        position: static;
+        height: auto;
+    }
+
+    .nested-comment {
+        margin-left: 10px;
     }
 }
