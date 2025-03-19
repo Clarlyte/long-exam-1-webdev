@@ -89,6 +89,7 @@ ul {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    padding-left: 225px;
 }
 
 .nav-links {
@@ -253,6 +254,12 @@ ul {
     color: #FF4500;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+}
+
+.sidebar-icon {
+    width: 16px; /* Adjust size as needed */
+    height: 16px;
+    margin-right: 8px; /* Space between icon and text */
 }
 
 
