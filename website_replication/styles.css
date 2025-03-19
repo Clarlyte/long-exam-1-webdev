@@ -244,6 +244,13 @@ ul {
     /* Ensures padding doesn't break layout */
 }
 
+.sidebar-icon {
+    width: 16px; /* Adjust icon size */
+    height: 16px;
+    margin-right: 10px;
+    padding-top: 7px;
+}
+
 .sidebar-menu a:hover {
     background-color: white;
     color: #FF4500;
