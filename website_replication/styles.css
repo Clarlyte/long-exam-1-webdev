@@ -48,6 +48,11 @@ ul {
     width: auto;
 }
 
+.mini {
+    position: absolute;
+    top: 10px;
+}
+
 .user-header {
     float: right;
     color: #336699;
@@ -244,13 +249,6 @@ ul {
     /* Ensures padding doesn't break layout */
 }
 
-.sidebar-icon {
-    width: 16px; /* Adjust icon size */
-    height: 16px;
-    margin-right: 10px;
-    padding-top: 7px;
-}
-
 .sidebar-menu a:hover {
     background-color: white;
     color: #FF4500;
@@ -285,6 +283,18 @@ ul {
     color: #666;
     font-size: 11px;
     margin-bottom: 5px;
+}
+
+
+.ad {
+    padding-top: 10px;
+
+}
+
+.ad img {
+    position: relative;
+    width: 100%;
+
 }
 
 /* Content area */
