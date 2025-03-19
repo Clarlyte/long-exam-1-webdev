@@ -260,6 +260,7 @@ ul {
     width: 16px; /* Adjust size as needed */
     height: 16px;
     margin-right: 8px; /* Space between icon and text */
+    padding-top: 7px;
 }
 
 
@@ -495,6 +496,42 @@ ul {
     font-size: 10px;
     margin-right: 5px;
 }
+
+.add-comment {
+    /* margin-top: 20px; */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .comment-form {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+  }
+  
+  .comment-form textarea {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+    font-size: 14px;
+  }
+  
+  .comment-form button {
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    color: black;
+    border: black solid 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100px;
+    height: 40px;
+  }
 
 /* Comments section (CSS-only using :target pseudo-class) */
 .comments-section {
